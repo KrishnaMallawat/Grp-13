@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" class="css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo" style="object-fit: none;"><img src="/himachalwebsite/Festivals-Of-Himachal-Pradesh.webp" alt=""></div>
+        <div class="nav-links">
+
+            <a href="index.html"><span class="icon">🏠</span>Home</a>
+            <a href="food.html"><span class="icon">🍴</span>Food</a>
+            <a href="festivals.html"><span class="icon">🎉</span>Festivals</a>
+            <a href="architecture.html"><span class="icon">🏰</span>Architecture</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div style="background: #3dd9b5; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h1>Festivals of Himachal Pradesh</h1>
+            </div>
+            <div class="festival-item box-style-1">
+                <img src="/himachalwebsite/Kullu Dussehra.jpeg " alt="Kullu Dussehra">
+                <div class="festival-content">
+                    <h2>Kullu Dussehra</h2>
+                    <p>Kullu Dussehra is a renowned festival celebrated in the Kullu Valley. It marks the victory of good over evil and is celebrated with great enthusiasm. The festival includes processions, cultural performances, and traditional rituals.</p>
+                </div>
+            </div>
+            <div class="festival-item box-style-2">
+                <img src="/himachalwebsite/losar.jpg" alt="Losar Festival">
+                <div class="festival-content">
+                    <h2>Losar Festival</h2>
+                    <p>Losar is the Tibetan New Year festival celebrated in the Lahaul-Spiti region of Himachal Pradesh. It is marked by traditional dances, music, and rituals to welcome the new year and bid farewell to the old one.</p>
+                </div>
+            </div>
+            <div class="festival-item box-style-3">
+                <img src="/himachalwebsite/Maha Shivratri.jpeg" alt="Maha Shivratri">
+                <div class="festival-content">
+                    <h2>Maha Shivratri</h2>
+                    <p>Maha Shivratri is a significant Hindu festival dedicated to Lord Shiva. It is celebrated with great devotion in Himachal Pradesh, especially in the Mandi district, where a grand fair is held.</p>
+                </div>
+            </div>
+            <div class="festival-item box-style-4">
+                <img src="/himachalwebsite/Minjar.jpg" alt="Minjar Festival">
+                <div class="festival-content">
+                    <h2>Minjar Festival</h2>
+                    <p>Minjar Festival is celebrated in the Chamba district to mark the harvest season. It includes cultural performances, sports events, and a grand procession. The festival is named after the maize flower, which symbolizes prosperity.</p>
+                </div>
+            </div>
+            <div class="festival-item box-style-5">
+                <img src="/himachalwebsite/Halda Festival.webp" alt="Halda Festival">
+                <div class="festival-content">
+                    <h2>Halda Festival</h2>
+                    <p>Halda Festival is celebrated in the Lahaul region to honor the goddess of wealth, Shashikar Apa. It involves lighting bonfires, traditional dances, and rituals to seek blessings for prosperity and well-being.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const festivalItems = document.querySelectorAll('.festival-item');
+        let currentIndex = 0;
+
+        function showNextFestival() {
+            festivalItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % festivalItems.length;
+            festivalItems[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextFestival, 3000);
+    </script>
+    <footer>
+        <div class="footer-content">
+            <h3>Himachal Pradesh Culture</h3>
+            <p>Experience the vibrant culture and rich heritage of Himachal Pradesh. From historical monuments to colorful festivals, Himachal Pradesh offers a unique blend of tradition and modernity.</p>
+            <ul class="socials" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://tse4.mm.bing.net/th?id=OIP.H836RvDYYgQZcZn0TC8qBAHaHa&rs=1&pid=ImgDetMain" alt="Twitter" style="width: 24px; height: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

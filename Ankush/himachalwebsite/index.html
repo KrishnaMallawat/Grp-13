@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Pradesh Culture and Tradition Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Welcome to Himachal Pradesh Culture Portal</h1>
+        <p>Discover the vibrant heritage, festivals, and traditions of Himachal Pradesh.</p>
+        <a href="events.html" class="btn">Explore Events</a>
+    </section>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><span class="icon">🏠</span>Home</a>
+            <a href="food.html"><span class="icon">🍴</span>Food</a>
+            <a href="festivals.html"><span class="icon">🎉</span>Festivals</a>
+            <a href="architecture.html"><span class="icon">🏰</span>Architecture</a>
+        </div>
+    </nav>
+    <main>
+        <div class="logo">
+            <img src="/himachalwebsite/logo.webp" alt="Logo">
+        </div>
+
+        <div class="container">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="/himachalwebsite/Himachal-feature-image-e1638421748290.webp" alt="Himachal Cultural Event">
+                <img src="/himachalwebsite/Him - History and CultureResize1280 x 780.jpg" alt="Himachal Cultural Event">
+                <img src="/himachalwebsite/th.jpeg" alt="Himachal Cultural Event">
+                <!-- Replace with your image source -->
+                <div class="highlight-box">
+                    Himachal Pradesh, a Land of Scenic Beauty and Rich Cultural Heritage, Celebrates its Diversity and Traditions that have Thrived for Over <br>
+                    <span>100</span> Years.
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="content">
+                <h2>Himachal Pradesh's Cultural Heritage</h2>
+                <p>
+                    Himachal Pradesh's culture is a vibrant tapestry woven with threads of history, art, music, and traditions. As a northern state of India, it serves as a melting pot for various cultures, offering a unique blend of ancient and modern influences. From classical
+                    dance performances to bustling street festivals, Himachal Pradesh showcases the spirit of its people and their rich heritage.
+                </p>
+                <p>
+                    The state is home to iconic monuments, traditional crafts, and diverse cuisines that reflect its historical significance and contemporary dynamism. Festivals like Diwali, Holi, and Kullu Dussehra bring people together to celebrate unity in diversity,
+                    making Himachal Pradesh a cultural treasure trove.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <h2 style="text-align: center; color: white; margin-bottom: 100px; margin-right: 50px;">Most Popular Destinations</h2>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="/himachalwebsite/shimla.jpeg" alt="Shimla">
+                    <div class="carousel-caption">Shimla</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/manali.jpg" alt="Manali">
+                    <div class="carousel-caption">Manali</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/dharamshala.jpg" alt="Dharamshala">
+                    <div class="carousel-caption">Dharamshala</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/kullu.webp" alt="Kullu">
+                    <div class="carousel-caption">Kullu</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/KASAULI.jpg" alt="Kasauli">
+                    <div class="carousel-caption">Kasauli</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/sprit valley.jpeg" alt="Spiti Valley">
+                    <div class="carousel-caption">Spiti Valley</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/solan.jpg" alt="Solan">
+                    <div class="carousel-caption">Solan</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/chamba.jpg" alt="Chamba">
+                    <div class="carousel-caption">Chamba</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/kangra.cms" alt="Kangra">
+                    <div class="carousel-caption">Kangra</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/himachalwebsite/hamirpur.jpg " alt="Hamirpur">
+                    <div class="carousel-caption">Hamirpur</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].classList.add('active');
+        }, 3000);
+    </script>
+    <footer>
+        <div class="footer-content">
+            <h3>Himachal Pradesh Culture</h3>
+            <p>Experience the vibrant culture and rich heritage of Himachal Pradesh. From historical monuments to colorful festivals, Himachal Pradesh offers a unique blend of tradition and modernity.</p>
+            <ul class="socials" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://tse4.mm.bing.net/th?id=OIP.H836RvDYYgQZcZn0TC8qBAHaHa&rs=1&pid=ImgDetMain" alt="Twitter" style="width: 24px; height: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons

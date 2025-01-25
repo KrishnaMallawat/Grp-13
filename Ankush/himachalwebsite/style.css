@@ -1,0 +1,435 @@
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('/himachalwebsite/images/himachal_image1.jpg');
+    }
+    25% {
+        background-image: url('/himachalwebsite/images/himachal_image2.jpg');
+    }
+    50% {
+        background-image: url('/himachalwebsite/images/himachal_image3.jpg');
+    }
+    75% {
+        background-image: url('/himachalwebsite/images/himachal_image4.jpg');
+    }
+    100% {
+        background-image: url('/himachalwebsite/images/himachal_image1.jpg');
+    }
+}
+
+@keyframes slideshow {
+    0% {
+        background-image: url('/himachalwebsite/Folk-dances-of-Himachal-Pradesh-Nati.jpg');
+    }
+    33% {
+        background-image: url('/himachalwebsite/masrur-min.jpeg');
+    }
+    66% {
+        background-image: url('/himachalwebsite/losar-festival5.jpg');
+    }
+    100% {
+        background-image: url('/himachalwebsite/Himachal-feature-image-e1638421748290.webp');
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6b484580;
+    animation: backgroundAnimation 20s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    text-align: center;
+    color: #dee77b;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: aqua;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #fffbfb;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #004080;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #e6b800;
+}
+
+.logo {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    background-image: url('');
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    background-color: #4CAF50;
+    padding-left: 35%;
+    border-radius: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0fb88;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff;
+    color: #4caf50;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+img:not([draggable]),
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-section img {
+    width: 300px;
+    height: auto;
+}
+
+.milestone {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-top: -50px;
+}
+
+.text-section {
+    max-width: 600px;
+    text-align: center;
+}
+
+.text-section h2 {
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/himachalwebsite/background\ image.webp');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 50px;
+}
+
+.content {
+    background: rgb(13 253 189 / 90%);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.image-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.highlight-box {
+    background: #06ccf3;
+    color: #0022b3;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.highlight-box span {
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #d40000;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    background-image: url('/himachalwebsite/1.jpg');
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.8) rotateY(90deg);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    z-index: 10;
+}
+
+.carousel-title {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background: rgb(12, 212, 234);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.food-content {
+    max-width: 600px;
+}
+
+.food-content h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.food-content p {
+    margin: 0;
+    size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.festival-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.festival-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.festival-content {
+    max-width: 600px;
+}
+
+.festival-content h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.festival-content p {
+    margin: 0;
+    color: #050505;
+}
+
+.festival-item.active {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.footer-content {
+    background-color: black;
+    color: #f6f2f2;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: cursive;
+}
+
+
+/* Box Styles */
+
+.box-style-1 {
+    background: #ffeb3b;
+    border: 2px solid #fbc02d;
+    border-radius: 10px;
+}
+
+.box-style-2 {
+    background: #8bc34a;
+    border: 2px solid #689f38;
+    border-radius: 10px;
+}
+
+.box-style-3 {
+    background: #03a9f4;
+    border: 2px solid #0288d1;
+    border-radius: 10px;
+}
+
+.box-style-4 {
+    background: #e91e63;
+    border: 2px solid #c2185b;
+    border-radius: 10px;
+}
+
+.box-style-5 {
+    background: #9c27b0;
+    border: 2px solid #7b1fa2;
+    border-radius: 10px;
+}
+
+.box-style-6 {
+    background: #ff5722;
+    border: 2px solid #e64a19;
+    border-radius: 10px;
+}
+
+.box-style-7 {
+    background: #795548;
+    border: 2px solid #5d4037;
+    border-radius: 10px;
+}
+
+.box-style-8 {
+    background: #607d8b;
+    border: 2px solid #455a64;
+    border-radius: 10px;
+}
