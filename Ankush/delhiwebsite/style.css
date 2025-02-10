@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6b484580;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f0f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 500px;
+    /* Ensures the nav stays on top of other elements */
+}
+
+.logo {
+    width: 100%;
+    /* Full width of the container */
+    height: 100%;
+    /* Full height of the container */
+    overflow: hidden;
+    /* Prevents overflow if the aspect ratio doesn't match */
+    background-image: url('');
+}
+
+.logo img {
+    width: 100%;
+    /* Makes the image stretch to fit the container's width */
+    height: 100%;
+    /* Stretches to fit the container's height */
+    object-fit: cover;
+    /* Ensures the image fills the container while maintaining its aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+img:not([draggable]),
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-section img {
+    width: 300px;
+    height: auto;
+}
+
+.milestone {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-top: -50px;
+}
+
+.text-section {
+    max-width: 600px;
+    text-align: center;
+}
+
+.text-section h2 {
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://c8.alamy.com/comp/F7TTCA/delhi-city-skyline-silhouette-background-F7TTCA.jpg');
+    /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 50px;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.image-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.highlight-box {
+    background: #ffffff;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.highlight-box span {
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #d40000;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    background-color: black;
+    overflow: hidden;
+    padding-bottom: 50px;
+    /* Add this line to ensure images don't overflow */
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Change to make images full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
+}
+
+.carousel-title {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.food-content {
+    max-width: 600px;
+}
+
+.food-content h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.food-content p {
+    margin: 0;
+    color: #666;
+}
