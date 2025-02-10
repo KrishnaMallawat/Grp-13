@@ -1,0 +1,126 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttarakhand Culture and Tradition Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video autoplay loop muted style="width: 100%;">
+        <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <div class="nav-links">
+            <a href="#history"><span class="icon">🏠</span>Home</a>
+            <a href="food.html"><span class="icon">🍴</span>Food</a>
+            <a href="festivals.html"><span class="icon">🎉</span>Festivals</a>
+            <a href="architecture.html"><span class="icon">🏰</span>Architecture</a>
+        </div>
+    </nav>
+    <main>
+        <div class="logo">
+            <img src="/uttrakhand/images/logo.jpg" alt="Logo">
+        </div>
+
+        <div class="container">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="/uttrakhand/images/uttarakhand_event1.jpg" alt="Uttarakhand Cultural Event">
+                <img src="/uttrakhand/images/uttarakhand_event2.jpg" alt="Uttarakhand Cultural Event">
+                <img src="/uttrakhand/images/uttarakhand_event3.jpg" alt="Uttarakhand Cultural Event">
+                <!-- Replace with your image source -->
+                <div class="highlight-box">
+                    Uttarakhand, a Land of Scenic Beauty and Rich Cultural Heritage, Celebrates its Diversity and Traditions that have Thrived for Over <br>
+                    <span>100</span> Years.
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="content">
+                <h2>Uttarakhand's Cultural Heritage</h2>
+                <p>
+                    Uttarakhand's culture is a vibrant tapestry woven with threads of history, art, music, and traditions. As a northern state of India, it serves as a melting pot for various cultures, offering a unique blend of ancient and modern influences. From classical
+                    dance performances to bustling street festivals, Uttarakhand showcases the spirit of its people and their rich heritage.
+                </p>
+                <p>
+                    The state is home to iconic monuments, traditional crafts, and diverse cuisines that reflect its historical significance and contemporary dynamism. Festivals like Diwali, Holi, and Kumbh Mela bring people together to celebrate unity in diversity, making
+                    Uttarakhand a cultural treasure trove.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <h2 style="text-align: center; color: white; margin-bottom: 100px; margin-right: 50px;">Most Popular Destinations</h2>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="/uttrakhand/images/nainital.jpg" alt="Nainital">
+                    <div class="carousel-caption">Nainital</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/mussoorie.jpg" alt="Mussoorie">
+                    <div class="carousel-caption">Mussoorie</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/rishikesh.jpg" alt="Rishikesh">
+                    <div class="carousel-caption">Rishikesh</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/haridwar.jpg" alt="Haridwar">
+                    <div class="carousel-caption">Haridwar</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/dehradun.jpg" alt="Dehradun">
+                    <div class="carousel-caption">Dehradun</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/auli.jpg" alt="Auli">
+                    <div class="carousel-caption">Auli</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/kedarnath.jpg" alt="Kedarnath">
+                    <div class="carousel-caption">Kedarnath</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/badrinath.jpg" alt="Badrinath">
+                    <div class="carousel-caption">Badrinath</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/jim_corbett.jpg" alt="Jim Corbett">
+                    <div class="carousel-caption">Jim Corbett</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/uttrakhand/images/valley_of_flowers.jpg" alt="Valley of Flowers">
+                    <div class="carousel-caption">Valley of Flowers</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].classList.add('active');
+        }, 3000);
+    </script>
+    <footer style="background-color: #333; color: #8f8f8f; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%;">
+        <div class="footer-content">
+            <h3>Uttarakhand Culture</h3>
+            <p>Experience the vibrant culture and rich heritage of Uttarakhand. From historical monuments to colorful festivals, Uttarakhand offers a unique blend of tradition and modernity.</p>
+            <ul class="socials" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Facebook_Logo_2020.png" alt="Facebook" style="width: 20px; height: 20px;"></a>
+                </li>
+                <li>
+                    <a href="#" style="color: white; text-decoration: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Twitter_Logo_2012.png" alt="Twitter" style="width: 20px; height: 20px;"></a>
+                </li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Uttarakhand Culture. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
