@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Stories - VIT Pune</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #283593;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      color: #455a64;
+      margin: 1rem 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* Featured Stories Section */
+    .stories-section {
+      margin-bottom: 3rem;
+      
+    }
+
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .story {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .story:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .story h3 {
+      color: #1a237e;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .story p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* Add Story Form */
+    .add-story-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .add-story-section h2 {
+      color: #283593;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #283593;
+    }
+
+    .form-group textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(106, 17, 203, 0.3);
+    }
+
+    .submit-btn:disabled {
+      background: #bbb;
+      cursor: not-allowed;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Success Stories</h1>
+
+    <!-- Featured Stories Section -->
+    <section class="stories-section">
+      <h2>Featured Stories</h2>
+      <div class="stories" id="storiesContainer">
+        <div class="story">
+          <h3>John Doe</h3>
+          <p>John secured a placement at Google with a package of 50 LPA. His journey through VIT Pune was transformative!</p>
+        </div>
+        <div class="story">
+          <h3>Jane Smith</h3>
+          <p>Jane developed an AI-based project during her final year, which won national recognition and funding.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add a Story Section -->
+    <section class="add-story-section">
+      <h2>Add Your Story</h2>
+      <form id="addStoryForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="achievement">Your Achievement</label>
+          <textarea id="achievement" placeholder="Share your success story" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Story</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>&copy; 2025 VIT Pune. All rights reserved.</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const addStoryForm = document.getElementById('addStoryForm');
+      const storiesContainer = document.getElementById('storiesContainer');
+
+      addStoryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const achievement = document.getElementById('achievement').value.trim();
+
+        if (name && achievement) {
+          // Add a new story to the stories section
+          const newStory = document.createElement('div');
+          newStory.classList.add('story');
+          newStory.innerHTML = `
+            <h3>${name}</h3>
+            <p>${achievement}</p>
+          `;
+
+          storiesContainer.appendChild(newStory);
+
+          // Clear the form
+          addStoryForm.reset();
+
+          alert('Success story added!');
+        } else {
+          alert('Please fill out all fields.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

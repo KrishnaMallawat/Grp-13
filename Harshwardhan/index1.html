@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This is a login page -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .login-form {
+      max-width: 500px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1a237e;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #1a237e, #283593);
+      border-radius: 2px;
+    }
+
+    .form-group {
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: #1a237e;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #1a237e;
+      box-shadow: 0 0 0 4px rgba(26,35,126,0.1);
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .form-group:focus-within label {
+      transform: translateY(-2px);
+      color: #283593;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 1.2rem;
+      background: linear-gradient(45deg, #1a237e, #283593);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .register-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .register-btn:hover::before {
+      left: 100%;
+    }
+
+    .register-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26,35,126,0.3);
+    }
+
+    .error {
+      color: #d32f2f;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      display: none;
+      padding-left: 0.5rem;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .error.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .login-form {
+        padding: 2rem;
+        margin: 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .register-btn {
+        padding: 0.9rem;
+      }
+    }
+
+    /* Custom select styling */
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231a237e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <h1>Join Us</h1>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="Enter your full name">
+        <div class="error" id="nameError">Please enter a valid name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+        <div class="error" id="emailError">Please enter a valid email address</div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="Enter your phone number">
+        <div class="error" id="phoneError">Please enter a valid phone number</div>
+      </div>
+
+      <div class="form-group">
+        <label for="domain">Choose Your Domain</label>
+        <select id="domain" required>
+          <option value="">Select your expertise</option>
+          <option value="web">Web Development</option>
+          <option value="android">Android Development</option>
+          <option value="ios">iOS Development</option>
+          <option value="ml">Machine Learning</option>
+          <option value="cloud">Cloud Computing</option>
+          <option value="cybersecurity">Cybersecurity</option>
+        </select>
+        <div class="error" id="domainError">Please select a domain</div>
+      </div>
+
+      <button type="submit" class="register-btn">Register Now</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('registrationForm');
+      
+      // Validation functions
+      const validateName = (name) => {
+        return name.length >= 2 && /^[a-zA-Z\s]+$/.test(name);
+      };
+
+      const validateEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      };
+
+      const validatePhone = (phone) => {
+        return /^\d{10}$/.test(phone);
+      };
+
+      const validateDomain = (domain) => {
+        return domain !== "";
+      };
+
+      // Show error message with animation
+      const showError = (fieldId, show) => {
+        const error = document.getElementById(`${fieldId}Error`);
+        if (show) {
+          error.style.display = 'block';
+          setTimeout(() => error.classList.add('show'), 10);
+        } else {
+          error.classList.remove('show');
+          setTimeout(() => error.style.display = 'none', 300);
+        }
+      };
+
+      // Real-time validation
+      document.getElementById('name').addEventListener('input', function() {
+        showError('name', !validateName(this.value));
+      });
+
+      document.getElementById('email').addEventListener('input', function() {
+        showError('email', !validateEmail(this.value));
+      });
+
+      document.getElementById('phone').addEventListener('input', function() {
+        showError('phone', !validatePhone(this.value));
+      });
+
+      document.getElementById('domain').addEventListener('change', function() {
+        showError('domain', !validateDomain(this.value));
+      });
+
+      // Form submission with animation
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const domain = document.getElementById('domain').value;
+
+        // Validate all fields
+        const isNameValid = validateName(name);
+        const isEmailValid = validateEmail(email);
+        const isPhoneValid = validatePhone(phone);
+        const isDomainValid = validateDomain(domain);
+
+        // Show/hide error messages
+        showError('name', !isNameValid);
+        showError('email', !isEmailValid);
+        showError('phone', !isPhoneValid);
+        showError('domain', !isDomainValid);
+
+        // If all validations pass
+        if (isNameValid && isEmailValid && isPhoneValid && isDomainValid) {
+          const btn = document.querySelector('.register-btn');
+          btn.style.transform = 'scale(0.95)';
+          setTimeout(() => btn.style.transform = '', 150);
+
+          console.log('Form submitted:', {
+            name,
+            email,
+            phone,
+            domain
+          });
+          
+          setTimeout(() => {
+            alert('Registration successful!');
+            form.reset();
+          }, 300);
+        }
+      });
+    });
+  </script>
+
+<script type="module" src="/src/main.tsx"></script>
+
+</body>
+</html>
