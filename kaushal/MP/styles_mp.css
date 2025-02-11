@@ -1,0 +1,145 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.jpg');
+    color: #333;
+}
+
+header {
+    background-image: url('mphead.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 20%; /* Adjust this value based on the aspect ratio of your background image */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1, header p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+
+}
+
+header h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+header p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #007849;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem 5%;
+}
+
+.hero-logo {
+    width: 25vw;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+section {
+    background-color: rgb(243, 216, 15);
+    margin-bottom: 2rem;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+h2 {
+    color: #007849;
+    border-bottom: 2px solid #007849;
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.tourist-place {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tourist-place img {
+    width: 250px;
+    height: auto;
+    margin-right: 1rem;
+    border: 2px solid #007849;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+#culture {
+    background-image: url('/madhya_pradesh_art.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#text {
+    background-color: rgba(240, 248, 255, 0.527);
+    color: black;
+}
+
+.culture-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem auto;
+    display: block;
+    border: 3px solid #007849;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
